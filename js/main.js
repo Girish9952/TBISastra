@@ -47,7 +47,6 @@ $(document).ready(function () {
         }
     }, 200);
 
-    $('.parallax-window-1').parallax({imageSrc: 'assets/start-up.jpg'});
-    $('.parallax-window-2').parallax({imageSrc: 'assets/km.jpg'});
-
+    $('.parallax-window-1').parallax({imageSrc: 'assets/iot.png'});
+    $('.parallax-window-2').parallax({imageSrc: 'assets/shutterstock.jpg'});
 });
