@@ -2,6 +2,11 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+h5 {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
 header {
     background: #2196F3;
     position: fixed;
@@ -17,6 +22,110 @@ header {
     width: 100%;
 }
 
+/*jssor slider loading skin spin css*/
+.jssorl-009-spin img {
+    animation-name: jssorl-009-spin;
+    animation-duration: 1.6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes jssorl-009-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/*jssor slider bullet skin 032 css*/
+.jssorb032 {
+    position: absolute;
+}
+
+#jssor_1 {
+    position: relative;
+    margin: 64px auto 0 auto;
+    top: 0;
+    left: 0;
+    width: 1300px;
+    height: 600px;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.jssorb032 .i {
+    position: absolute;
+    cursor: pointer;
+}
+
+.jssorb032 .i .b {
+    fill: #fff;
+    fill-opacity: 0.7;
+    stroke: #000;
+    stroke-width: 1200px;
+    stroke-miterlimit: 10;
+    stroke-opacity: 0.25;
+}
+
+.jssorb032 .i:hover .b {
+    fill: #000;
+    fill-opacity: .6;
+    stroke: #fff;
+    stroke-opacity: .35;
+}
+
+.jssorb032 .iav .b {
+    fill: #000;
+    fill-opacity: 1;
+    stroke: #fff;
+    stroke-opacity: .35;
+}
+
+.jssorb032 .i.idn {
+    opacity: .3;
+}
+
+/*jssor slider arrow skin 051 css*/
+.jssora051 {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+}
+
+.jssora051 .a {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 360px;
+    stroke-miterlimit: 10;
+}
+
+.jssora051:hover {
+    opacity: .8;
+}
+
+.jssora051.jssora051dn {
+    opacity: .5;
+}
+
+.jssora051.jssora051ds {
+    opacity: .3;
+    pointer-events: none;
+}
+
+.jssorl-009-spin {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+/*Slider End*/
+
+/*nav bar*/
 .nav-up {
     top: -65px;
 }
@@ -46,6 +155,9 @@ header {
 .navbar-nav li a {
     color: #eee;
     transition: 0.3s;
+    font-size: 1.2rem;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 .navbar-nav li a:hover {
@@ -55,6 +167,10 @@ header {
 ul.nav {
     margin: 0;
     padding: 0;
+}
+
+.active {
+    color: #ffffff !important;
 }
 
 /* hamburger icon */
@@ -151,12 +267,13 @@ ul.nav {
 }
 
 .banner-text {
-    background: rgba(212, 212, 212, 0.76);
+    display: block;
+    width: 100%;
+    background: rgba(171, 171, 171, 0.53);
     position: absolute;
-    top: 523px;
     text-align: center;
-    left: 0;
-    right: 0;
+    padding: 20px;
+    bottom: 0;
     color: #000558;
 }
 
@@ -176,7 +293,7 @@ ul.nav {
 /*start*/
 
 #about-us {
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
 #about-us h3, h5 {
@@ -194,7 +311,17 @@ ul.nav {
 }
 
 .card {
-    background: rgb(218, 236, 255);
+    margin: 20px auto 20px auto;
+    background: rgb(255, 255, 255);
+    box-shadow: #b2b2b2 3px 3px 5px;
+}
+
+.card:nth-child(0) {
+    margin: 0 auto 15px auto;
+}
+
+.card:nth-last-child(0) {
+    margin: 15px auto 5px auto;
 }
 
 .col-lg-4-image {
@@ -207,10 +334,11 @@ ul.nav {
 }
 
 .description-text {
-    width: 70%;
+    width: 90%;
     letter-spacing: 0.1em;
-    font-size: 22px;
+    font-size: 1.3rem;
     margin: 0 auto;
+    text-align: justify;
 }
 
 .description-image {
@@ -224,8 +352,65 @@ ul.nav {
     margin: 0;
 }
 
-#description-2 {
+.description-2 {
+    width: 90%;
+    margin: 0 auto;
     margin-top: 50px !important;
+    padding: 5px;
+}
+
+/*About*/
+
+video {
+    width: 100%;
+    margin-top: 64px;
+}
+
+#banner-wrapper-3d {
+    position: relative;
+}
+
+.banner-3d-text {
+    display: block;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    font-size: 2.6rem;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    text-align: center;
+    background: rgba(171, 171, 171, 0.53);
+    color: #fff;
+    margin-bottom: 6px;
+}
+
+#banner-3d-media-text {
+    display: none;
+    text-align: center;
+    /*font-size: 1.7rem;*/
+}
+
+.about-text {
+    width: 80%;
+    margin: 50px auto;
+    letter-spacing: 2px;
+    text-align: justify;
+    line-height: 1.7rem;
+    font-size: 1.3rem;
+}
+
+#iot .about-text {
+    width: 90%;
+}
+
+.about-image {
+    width: 70%;
+    margin: 40px auto 20px auto;
+    height: 400px;
+}
+
+#3d-wrapper div.row {
+    margin: 15px 0 15px 0;
 }
 
 /*end*/
@@ -269,7 +454,7 @@ div.text-center p {
     padding: 10px;
 }
 
-.copy-right h6{
+.copy-right h6 {
     width: 100%;
     text-align: center;
 }
@@ -282,7 +467,7 @@ form button {
 
 .separator {
     border: 1px solid white;
-    width: 1px;
+    width: 0.1rem;
     height: 280px;
     display: inline-block;
     margin: 0 0;
@@ -292,72 +477,148 @@ footer div.col-lg-8 {
     margin: -5px;
 }
 
-@media screen and (min-width: 769px){
+@media screen and (min-width: 769px) {
     .form-container {
         margin-left: 50px;
         margin-right: 100px;
     }
 }
 
-@media screen and (max-width: 768px){
-
-}
-
 /*end*/
-
-
 
 @media screen and (max-width: 1024px) {
 
     /*main*/
     /*start*/
     .description-text {
-        width: 70%;
-        font-size: 22px;
+        width: 90%;
+        font-size: 1.3rem;
         margin: 0 auto;
+        text-align: justify;
     }
+
+    .about-text {
+        width: 80%;
+        margin: 50px auto;
+        letter-spacing: 2px;
+        text-align: justify;
+        line-height: 1.5rem;
+        font-size: 1rem;
+    }
+
+    .about-image {
+        width: 70%;
+        margin: 40px auto 10px auto;
+        height: 400px;
+    }
+
     /*end*/
+}
+
+@media screen and (max-width: 892px) {
+    .separator {
+        margin: 10px 0 10px 0 !important;
+        height: 0.1rem;
+        width: 100%;
+        display: inline-block;
+    }
 }
 
 @media screen and (max-width: 768px) {
 
     /*main*/
     /*start*/
-
     .card-margin {
         margin-bottom: 15px;
     }
 
-    .description-text {
-        width: 70%;
-        font-size: 18px;
+    .description-image {
+        width: 80%;
         margin: 0 auto;
     }
-    /*end*/
 
+    .description-image img {
+        max-width: 100%;
+        max-height: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .description-text {
+        width: 95%;
+        font-size: 1.1rem;
+        margin: 0 auto;
+        text-align: justify;
+    }
+
+    video {
+        max-width: 100%;
+        -webkit-transform: scaleY(2);
+        -moz-transform: scaleY(2);
+        -ms-transform: scaleY(2);
+        -o-transform: scaleY(2);
+        transform: scaleY(2);
+        overflow: hidden;
+    }
+
+    .banner-3d-text {
+        /*display: none;*/
+        font-size: 2.2rem;
+        bottom: -200px;
+        margin-bottom: 0;
+        padding-top: 20px;
+        padding-bottom: 40px;
+    }
+
+    #banner-3d-media-text {
+        /*display: block;*/
+    }
+
+    #about-us {
+        margin-top: 180px;
+    }
+
+    #iot #about-us {
+        margin-top: 40px;
+    }
+
+    .about-text {
+        width: 80%;
+        margin: 50px auto;
+        letter-spacing: 2px;
+        text-align: justify;
+        line-height: 1.5rem;
+        font-size: 1rem;
+    }
+
+    .about-image {
+        width: 70%;
+        margin: 40px auto 10px auto;
+        height: 400px;
+    }
+
+    /*end*/
     /*footer*/
     /*start*/
     footer {
         padding: 15px;
     }
-
-    .separator {
-        margin: 10px 0 10px 0!important;
-        height: 1px;
-        width: 100%;
-        display: inline-block;
-    }
     /*end*/
 
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 700px) {
+    .banner-3d-text {
+        bottom: -170px;
+    }
+}
+
+@media screen and (max-width: 500px) {
 
     /*main*/
     /*start*/
     #about-us h5 {
         width: 100%;
-        text-align: left;
     }
 
     #description {
@@ -368,10 +629,40 @@ footer div.col-lg-8 {
         display: none;
     }
 
-    /*end*/
+    .banner-3d-text {
+        bottom: unset;
+    }
 
+    .about-text {
+        width: 100%;
+        text-align: justify;
+        margin: 20px 0 20px 0;
+        letter-spacing: 0.1rem;
+        line-height: 1.5rem;
+        font-size: 1rem;
+    }
+
+    .about-image {
+        width: 70%;
+        margin: 40px auto 10px auto;
+        height: 400px;
+    }
+
+    /*end*/
     footer {
         margin-top: 0 !important;
     }
 
+}
+
+@media screen and (max-width: 350px) {
+    video {
+        max-width: 100%;
+        -webkit-transform: scaleY(2.3);
+        -moz-transform: scaleY(2.3);
+        -ms-transform: scaleY(2.3);
+        -o-transform: scaleY(2.3);
+        transform: scaleY(2.3);
+        overflow: hidden;
+    }
 }
